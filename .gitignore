@@ -195,12 +195,6 @@ cython_debug/
 *.out
 *.app
 
-
-## Other
-hashi/pdfs
-
-## Puzzle Database
-database/easy/*
-database/intermediate/*
-database/hard/*
-database/unordered/*
+test_assets/
+logs/*
+!logs/.gitinclude
