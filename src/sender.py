@@ -11,9 +11,13 @@ from services.email_service import send_emails
 
 if __name__ == "__main__":
   subject = "Test Email"
-  body = "This is a test email sent from Python!"
-
   to_emails = ["ertugrul.a.senturk@gmail.com"] * 10
+  try:
+    with open("mail_template.html") as body_file:
+      body = body_file.read()
+  except Exception as e:
+    print("Could not open mail body file: ", e)
+    exit(1)
   
   apply_log_config()
 
