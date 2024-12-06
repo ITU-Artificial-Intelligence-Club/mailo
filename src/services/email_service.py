@@ -18,7 +18,8 @@ def send_emails(smtp_server: str, smtp_port: int, username: str, password: str, 
       msg['Subject'] = subject
 
       # Attach the email body
-      msg.attach(MIMEText(body, 'plain'))
+      msg.attach(MIMEText(body, 'html'))
+
       try:
         server.send_message(msg)
         print(f"Email sent to {to_email}")
